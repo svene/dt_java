@@ -1,0 +1,78 @@
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'idea'
+apply plugin: 'maven'
+
+group='org.svenehrke'
+version = '0.0.1'
+archivesBaseName = 'dt_java'
+
+idea {
+	project {
+		jdkName = '1.6'
+	}
+	module {
+		downloadSources = false
+		downloadJavadoc = false
+	}
+}
+
+repositories {
+	mavenRepo urls: "${userDeploymentRepoBaseURL.replace('/localhost', '')}/releases"
+	mavenCentral()
+}
+
+
+dependencies {
+	compile 'org.svenehrke:directory_template:0.0.2'
+	groovy localGroovy()
+}
+
+
+task zipSimpleJava(type: Zip) {
+	from 'templatedirectory/simplejava'
+	baseName = 'dt_simplejava'
+	version = ''
+}
+
+task zipSimpleSwingJava(type: Zip) {
+	from 'templatedirectory/simpleswing'
+	baseName = 'dt_simpleswing'
+	version = ''
+}
+
+task zipGradle(type: Zip) {
+	from 'templatedirectory/gradle'
+	baseName = 'dt_gradle'
+	version = ''
+}
+
+jar {
+	dependsOn zipSimpleJava, zipSimpleSwingJava, zipGradle
+	from "$buildDir/distributions/dt_simplejava.zip"
+	from "$buildDir/distributions/dt_simpleswing.zip"
+	from "$buildDir/distributions/dt_gradle.zip"
+}
+
+// see http://evgeny-goldin.com/wiki/Gradle (section 'Setting the repository URL at the time the DAG is ready')
+gradle.taskGraph.whenReady { tg ->
+	if (!tg.hasTask(':makeRelease')) {
+		version += '-SNAPSHOT'
+		uploadArchives.repositories['mavenDeployer'].repository.url = "${userDeploymentRepoBaseURL}/snapshots"
+	}
+}
+
+uploadArchives {
+	repositories.mavenDeployer {
+		repository(url: "${userDeploymentRepoBaseURL}/releases")
+	}
+}
+
+task makeSnapshot(dependsOn: 'uploadArchives')
+
+task makeRelease(dependsOn: 'uploadArchives')
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.0-milestone-5-20110927091445+0200'
+}
+

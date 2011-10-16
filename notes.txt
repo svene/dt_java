@@ -1,0 +1,2 @@
+- in GradleDTDefinition the 'packagename' inputparameter had to be added since it needs to be put
+  into 'build.gradle' for the application plugin
