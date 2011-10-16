@@ -1,2 +1,7 @@
+run:
+	groovy http://svene.github.com/jdt.groovy simplejava
+	groovy http://svene.github.com/jdt.groovy simpleswing
+	groovy http://svene.github.com/jdt.groovy gradle
+
 - in GradleDTDefinition the 'packagename' inputparameter had to be added since it needs to be put
   into 'build.gradle' for the application plugin
