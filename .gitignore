@@ -1,3 +1,5 @@
 build/
 .gradle/
-
+dt_java.iml
+dt_java.ipr
+dt_java.iws
