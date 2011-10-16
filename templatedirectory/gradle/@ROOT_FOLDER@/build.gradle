@@ -6,8 +6,7 @@ apply plugin: 'application'
 mainClassName = '${packagename}.Main'
 
 group='org.svenehrke'
-version = '0.0.1'
-archivesBaseName = 'somename'
+version = '0.0.2'
 
 idea {
 	project {
