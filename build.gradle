@@ -73,6 +73,6 @@ task makeSnapshot(dependsOn: 'uploadArchives')
 task makeRelease(dependsOn: 'uploadArchives')
 
 task wrapper(type: Wrapper) {
-	gradleVersion = '1.0-milestone-5-20110927091445+0200'
+	gradleVersion = '1.0-milestone-5'
 }
 
