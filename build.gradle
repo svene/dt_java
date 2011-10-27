@@ -4,7 +4,7 @@ apply plugin: 'idea'
 apply plugin: 'maven'
 
 group='org.svenehrke'
-version = '0.0.1'
+version = '0.0.2'
 archivesBaseName = 'dt_java'
 
 idea {
@@ -24,7 +24,7 @@ repositories {
 
 
 dependencies {
-	compile 'org.svenehrke:directory_template:0.0.2'
+	compile 'org.svenehrke:directory_template:0.0.3'
 	groovy localGroovy()
 }
 
