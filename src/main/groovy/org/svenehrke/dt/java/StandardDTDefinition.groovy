@@ -1,35 +1,18 @@
 package org.svenehrke.dt.java
 
-import org.svenehrke.directorytemplate.BaseDTDefinition
 import org.svenehrke.directorytemplate.DTInputParameter
+import org.svenehrke.directorytemplate.BaseDirectoryTemplateBuilder
 
-class StandardDTDefinition extends BaseDTDefinition {
+class StandardDTDefinition extends BaseDirectoryTemplateBuilder {
 
 	@Override
-	Map<String, DTInputParameter> newInputParameters() {
-		Map<String, DTInputParameter> result = [:]
-		result['ROOT_FOLDER'] = new DTInputParameter(value: 'myproject', prompt: 'Projectname (name of root folder)')
-		result
+	Map<String, String> newFilenameBinding(Map<String, DTInputParameter> aInputParameters) {
+		[:]
 	}
 
 	@Override
-	void addDerivedInputParameters(Map<String, DTInputParameter> aInputParameters) {
-//		aInputParameters['appPackageName'] = new DTInputParameter(value: aInputParameters.extPackageName.value.replace('extension', 'app'), prompt: '-')
-	}
-
-	@Override
-	Map<String, String> getFilenameBinding() {
-		[
-			//todo: apply from input parameters automatically?:
-			'@ROOT_FOLDER@':inputParameters.ROOT_FOLDER.value,
-		]
-	}
-
-	@Override
-	Map<String, String> getTextBinding() {
-		[
-			:
-		]
+	Map<String, String> newTextBinding(Map<String, DTInputParameter> aInputParameters) {
+		[:]
 	}
 
 	@Override

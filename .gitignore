@@ -1,4 +1,5 @@
 build/
+out/
 .gradle/
 dt_java.iml
 dt_java.ipr

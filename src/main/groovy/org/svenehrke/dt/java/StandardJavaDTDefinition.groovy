@@ -12,26 +12,21 @@ class StandardJavaDTDefinition extends StandardDTDefinition {
 	}
 
 	@Override
-	void addDerivedInputParameters(Map<String, DTInputParameter> aInputParameters) {
-//		aInputParameters['appPackageName'] = new DTInputParameter(value: aInputParameters.extPackageName.value.replace('extension', 'app'), prompt: '-')
-	}
-
-	@Override
-	Map<String, String> getFilenameBinding() {
-		Map result = super.getFilenameBinding()
+	Map<String, String> newFilenameBinding(Map<String, DTInputParameter> aInputParameters) {
+		Map result = super.newFilenameBinding(aInputParameters)
 		result <<
 		[
-			'@packagename@':DTUtil.dotsToSlashes(inputParameters.packagename.value)
+			'@packagename@':DTUtil.dotsToSlashes(aInputParameters.packagename.value)
 		]
 		result
 	}
 
 	@Override
-	Map<String, String> getTextBinding() {
-		Map result = super.getTextBinding()
+	Map<String, String> newTextBinding(Map<String, DTInputParameter> aInputParameters) {
+		Map result = super.newTextBinding(aInputParameters)
 		result <<
 		[
-			'packagename':inputParameters.packagename.value
+			'packagename':aInputParameters.packagename.value
 		]
 		result
 	}
