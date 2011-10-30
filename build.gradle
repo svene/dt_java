@@ -44,9 +44,10 @@ task zipSimpleSwingJava(type: Zip) {
 }
 
 task zipGradle(type: Zip) {
-	from 'templatedirectory/gradle'
+	from 'templatedirectory'
 	baseName = 'dt_gradle'
 	version = ''
+	include 'gradle/**'
 }
 
 jar {

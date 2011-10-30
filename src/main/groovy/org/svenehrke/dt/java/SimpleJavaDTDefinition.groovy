@@ -12,7 +12,8 @@ class SimpleJavaDTDefinition extends StandardJavaDTDefinition {
 	}
 
 	@Override
-	String getZipName() {
-		'dt_simplejava.zip'
+	String templateName() {
+		'simplejava'
 	}
+
 }

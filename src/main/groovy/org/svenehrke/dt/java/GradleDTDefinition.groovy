@@ -22,7 +22,8 @@ class GradleDTDefinition extends StandardDTDefinition {
 	}
 
 	@Override
-	String getZipName() {
-		'dt_gradle.zip'
+	String templateName() {
+		'gradle'
 	}
+
 }

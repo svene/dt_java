@@ -3,7 +3,7 @@ package org.svenehrke.dt.java
 import org.svenehrke.directorytemplate.DTInputParameter
 import org.svenehrke.directorytemplate.BaseDirectoryTemplateBuilder
 
-class StandardDTDefinition extends BaseDirectoryTemplateBuilder {
+abstract class StandardDTDefinition extends BaseDirectoryTemplateBuilder {
 
 	@Override
 	Map<String, String> newFilenameBinding(Map<String, DTInputParameter> aInputParameters) {
@@ -20,8 +20,4 @@ class StandardDTDefinition extends BaseDirectoryTemplateBuilder {
 		['.gif', '.png']
 	}
 
-	@Override
-	String getZipName() {
-		'dt_somezip.zip'
-	}
 }

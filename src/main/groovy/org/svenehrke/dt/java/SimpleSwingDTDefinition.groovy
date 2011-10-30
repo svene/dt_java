@@ -12,7 +12,8 @@ class SimpleSwingDTDefinition extends StandardJavaDTDefinition {
 	}
 
 	@Override
-	String getZipName() {
-		'dt_simpleswing.zip'
+	String templateName() {
+		'simpleswing'
 	}
+
 }
