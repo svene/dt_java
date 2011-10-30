@@ -32,15 +32,17 @@ dependencies {
 
 
 task zipSimpleJava(type: Zip) {
-	from 'templatedirectory/simplejava'
+	from 'templatedirectory'
 	baseName = 'dt_simplejava'
 	version = ''
+	include 'simplejava/**'
 }
 
 task zipSimpleSwingJava(type: Zip) {
-	from 'templatedirectory/simpleswing'
+	from 'templatedirectory'
 	baseName = 'dt_simpleswing'
 	version = ''
+	include 'simpleswing/**'
 }
 
 task zipGradle(type: Zip) {
