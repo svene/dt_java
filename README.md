@@ -91,20 +91,20 @@ And run it:
 	gradle run
 
 
-Java Templates
----------------
+Simple Java Template
+--------------------
 	$ mkdir myproject
 	$ cd myproject
 	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy simplejava
 
-Gradle Templates
+Gradle Template
 ---------------
 	$ mkdir myproject
 	$ cd myproject
 	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy gradle
 
-Simple Swing
----------------
+Simple Java Swing Template
+--------------------------
 
 	$ mkdir myproject
 	$ cd myproject
