@@ -17,4 +17,30 @@ new templates is highly appreciated.
 
 Usage
 -----
+	mkdir myproject
+	cd myproject
+
+With groovy 1.8.3:
+
+	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy simplejava
+
+With earlier version of groovy:
+
+	$ wget https://raw.github.com/svene/dt_java/master/gdt.groovy
+	$ groovy gdt.groovy
+
+Answer 'org.myproject' when asked for the packagename:
+
+	??> Packagename [org.svenehrke.simplejava]
+
+This will create the following folder structure
+
+	src/
+	├── main
+	│   └── java
+	│       └── org
+	│           └── myproject
+	│               └── Main.java
+	└── test
+	    └── java
 
