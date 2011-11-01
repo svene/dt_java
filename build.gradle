@@ -6,7 +6,7 @@ apply plugin: 'maven'
 apply from: 'https://raw.github.com/evgeny-goldin/gradle-plugins/master/src/main/groovy/CodeNarc.gradle'
 
 group='org.svenehrke'
-version = '0.0.3'
+version = '0.0.4'
 archivesBaseName = 'dt_java'
 
 idea {
