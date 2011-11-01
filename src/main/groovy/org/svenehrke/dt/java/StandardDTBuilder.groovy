@@ -3,7 +3,7 @@ package org.svenehrke.dt.java
 import org.svenehrke.directorytemplate.DTInputParameter
 import org.svenehrke.directorytemplate.BaseDirectoryTemplateBuilder
 
-abstract class StandardDTDefinition extends BaseDirectoryTemplateBuilder {
+abstract class StandardDTBuilder extends BaseDirectoryTemplateBuilder {
 
 	@Override
 	Map<String, String> newFilenameBinding(Map<String, DTInputParameter> aInputParameters) {

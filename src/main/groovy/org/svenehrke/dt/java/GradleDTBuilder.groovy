@@ -2,7 +2,7 @@ package org.svenehrke.dt.java
 
 import org.svenehrke.directorytemplate.DTInputParameter
 
-class GradleDTDefinition extends StandardDTDefinition {
+class GradleDTBuilder extends StandardDTBuilder {
 
 	@Override
 	Map<String, DTInputParameter> newInputParameters() {

@@ -3,7 +3,7 @@ package org.svenehrke.dt.java
 import org.svenehrke.directorytemplate.DTInputParameter
 import org.svenehrke.directorytemplate.DTUtil
 
-abstract class StandardJavaDTDefinition extends StandardDTDefinition {
+abstract class StandardJavaDTBuilder extends StandardDTBuilder {
 
 	@Override
 	Map<String, DTInputParameter> newInputParameters() {
