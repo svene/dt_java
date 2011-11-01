@@ -1,6 +1,6 @@
 @GrabResolver(name='sven-github', root='http://svene.github.com/maven2/releases')
 @Grapes([
-	@Grab(group='org.svenehrke', module='dt_java', version='0.0.3')
+	@Grab(group='org.svenehrke', module='dt_java', version='0.0.2')
 ])
 import org.svenehrke.dt.java.SimpleJavaDTBuilder
 import org.svenehrke.dt.java.SimpleSwingDTBuilder
