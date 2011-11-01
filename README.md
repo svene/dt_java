@@ -15,8 +15,8 @@ for developing https://github.com/svene/directory_template.
 Feedback and contributions in form of improvements of the existing code and
 new templates is highly appreciated.
 
-Usage
------
+Getting started
+---------------
 	mkdir myproject
 	cd myproject
 
@@ -114,3 +114,6 @@ Run the swing application (provided you have also created the gradle build file)
 
 	$ gradle run
 
+To Do
+-----
+- gradle template: support wrapper
