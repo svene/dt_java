@@ -7,9 +7,9 @@ import org.svenehrke.dt.java.SimpleSwingDTBuilder
 import org.svenehrke.dt.java.GradleDTBuilder
 
 Map templates = [
-	'simplejava' : new SimpleJavaDTDefinition(),
-	'simpleswing' : new SimpleSwingDTDefinition(),
-	'gradle' : new GradleDTDefinition()
+	'simplejava' : new SimpleJavaDTBuilder(),
+	'simpleswing' : new SimpleSwingDTBuilder(),
+	'gradle' : new GradleDTBuilder()
 ]
 
 if (!args) {
