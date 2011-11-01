@@ -51,9 +51,9 @@ that file as well.
 What was also generated is a hidden directory '.directory_template'. Inside it
 a file name 'inputParameters.properties' 'has been created:
 
-.directory_template/
-├── inputParameters.properties
-└── simplejava
+	.directory_template/
+	├── inputParameters.properties
+	└── simplejava
 
 'inputParameters.properties' contains the values you entered at the commandline.
 This makes it possible for future calls to pick up the values you defined so far
