@@ -93,14 +93,24 @@ And run it:
 
 Java Templates
 ---------------
-See Usage
+	$ mkdir myproject
+	$ cd myproject
+	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy simplejava
 
 Gradle Templates
 ---------------
-See Usage
+	$ mkdir myproject
+	$ cd myproject
+	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy gradle
 
 Simple Swing
 ---------------
 
-	groovy https://raw.github.com/svene/dt_java/master/gdt.groovy simpleswing
+	$ mkdir myproject
+	$ cd myproject
+	$ groovy https://raw.github.com/svene/dt_java/master/gdt.groovy simpleswing
+
+Run the swing application (provided you have also created the gradle build file):
+
+	$ gradle run
 
