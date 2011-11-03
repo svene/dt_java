@@ -2,4 +2,4 @@
 @Grab(group='org.svenehrke', module='dt_java', version='0.0.5')
 import org.svenehrke.dt.Invoker
 
-new Invoker(args).run()
+new Invoker().run(run)
