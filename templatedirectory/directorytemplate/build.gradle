@@ -3,10 +3,8 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
-apply from: 'https://raw.github.com/evgeny-goldin/gradle-plugins/master/src/main/groovy/CodeNarc.gradle'
-
-group='org.svenehrke'
-version = '0.0.6'
+group='${packagename}'
+version = '0.0.1'
 archivesBaseName = 'dt_java'
 
 idea {
@@ -31,27 +29,6 @@ dependencies {
 }
 
 
-task zipSimpleJava(type: Zip) {
-	from 'templatedirectory'
-	baseName = 'dt_simplejava'
-	version = ''
-	include 'simplejava/**'
-}
-
-task zipSimpleSwingJava(type: Zip) {
-	from 'templatedirectory'
-	baseName = 'dt_simpleswing'
-	version = ''
-	include 'simpleswing/**'
-}
-
-task zipGradle(type: Zip) {
-	from 'templatedirectory'
-	baseName = 'dt_gradle'
-	version = ''
-	include 'gradle/**'
-}
-
 task zipDirectoryTemplate(type: Zip) {
 	from 'templatedirectory'
 	baseName = 'dt_directorytemplate'
@@ -60,10 +37,8 @@ task zipDirectoryTemplate(type: Zip) {
 }
 
 jar {
-	dependsOn zipSimpleJava, zipSimpleSwingJava, zipGradle, zipDirectoryTemplate
-	from "$buildDir/distributions/dt_simplejava.zip"
-	from "$buildDir/distributions/dt_simpleswing.zip"
-	from "$buildDir/distributions/dt_gradle.zip"
+	dependsOn zipDirectoryTemplate
+	from "$buildDir/distributions/dt_directorytemplate.zip"
 }
 
 // see http://evgeny-goldin.com/wiki/Gradle (section 'Setting the repository URL at the time the DAG is ready')
