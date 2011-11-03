@@ -3,9 +3,9 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
-group='${packagename}'
+group='${group}'
+archivesBaseName = 'dt_${lctemplatename}'
 version = '0.0.1'
-archivesBaseName = 'dt_java'
 
 idea {
 	project {
@@ -18,6 +18,8 @@ idea {
 }
 
 repositories {
+	// make sure to set 'userDeploymentRepoBaseURL'. E.g. in $HOME/.gradle/gradle.properties:
+	// Example: userDeploymentRepoBaseURL=file://localhost/home/sven/maven2
 	mavenRepo urls: "${userDeploymentRepoBaseURL.replace('/localhost', '')}/releases"
 	mavenCentral()
 }
@@ -29,16 +31,16 @@ dependencies {
 }
 
 
-task zipDirectoryTemplate(type: Zip) {
+task zip${templatename}(type: Zip) {
 	from 'templatedirectory'
-	baseName = 'dt_directorytemplate'
+	baseName = 'dt_${lctemplatename}'
 	version = ''
-	include 'directorytemplate/**'
+	include '${lctemplatename}/**'
 }
 
 jar {
-	dependsOn zipDirectoryTemplate
-	from "$buildDir/distributions/dt_directorytemplate.zip"
+	dependsOn zip${templatename}
+	from "$buildDir/distributions/dt_${lctemplatename}.zip"
 }
 
 // see http://evgeny-goldin.com/wiki/Gradle (section 'Setting the repository URL at the time the DAG is ready')
