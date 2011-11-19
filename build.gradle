@@ -20,7 +20,7 @@ idea {
 }
 
 repositories {
-	mavenRepo urls: "${userDeploymentRepoBaseURL.replace('/localhost', '')}/releases"
+	mavenRepo (url: "${userDeploymentRepoBaseURL.replace('/localhost', '')}/releases")
 	mavenCentral()
 }
 
