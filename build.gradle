@@ -3,8 +3,6 @@ apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'maven'
 
-apply from: 'https://raw.github.com/evgeny-goldin/gradle-plugins/master/src/main/groovy/CodeNarc.gradle'
-
 group='org.svenehrke'
 version = '0.0.6'
 archivesBaseName = 'dt_java'
@@ -27,6 +25,7 @@ repositories {
 
 dependencies {
 	compile 'org.svenehrke:directory_template:0.0.4'
+//	compile 'commons-io:commons-io:2.4'
 	groovy localGroovy()
 }
 
