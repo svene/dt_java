@@ -13,4 +13,9 @@ config {
 
 		result
 	}
+	textBinding {
+		fileExclusionFilter = { File file ->
+			['.png', '.gif'].any {file.name.endsWith(it)}
+		}
+	}
 }
