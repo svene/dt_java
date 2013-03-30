@@ -2,7 +2,7 @@ def util = new org.svenehrke.directorytemplate.DTUtil()
 
 config {
 	parameters = [
-		[name: 'packagename', value: 'com.mycompany.mypackage', prompt: 'Packagename'],
+		[name: 'packagename', value: 'com.company.package', prompt: 'Packagename'],
 	]
 	transformer = { params ->
 		def result = []
