@@ -1,3 +1,6 @@
+IMPORTANT: OUT OF DATE, will be updated soon
+
+
 Templates for JVM based Directory Structures
 ===============================================================================
 
