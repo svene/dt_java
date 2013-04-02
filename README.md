@@ -23,4 +23,6 @@ Build and run the example as follows (requires an installation of the build tool
 
 * invoke: gradle run
 
+which should show a nice JavaFX hello world window.
+
 (soon gdt templates for the gradle wrapper will be available so that a gradle installation will not be necessary anymore)
