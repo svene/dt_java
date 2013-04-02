@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'maven'
+apply plugin: 'application'
+
+mainClassName = 'com.canoo.javafxtraining.first.Main'
+
+group='org.svenehrke'
+version = '0.0.2'
+
+idea {
+	project {
+		jdkName = '1.7'
+	}
+	module {
+		downloadSources = false
+		downloadJavadoc = false
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+def javaHome = System.env['JAVA_HOME']
+/*
+if(!javaHome) {
+    println """Please set environment variable JAVA_HOME
+to the directory that contains /jre/lib/jfxrt.jar
+for JavaFX version $requiredJavaFxVersion"""
+    System.exit 1
+}
+*/
+
+dependencies {
+	compile 'org.jfxtras:jfxtras-labs:2.2-r4'
+	compile files("${javaHome}/jre/lib/jfxrt.jar")
+	testCompile group: 'junit', name: 'junit', version: '4.10'
+}
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '1.5'
+}
+
