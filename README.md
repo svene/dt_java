@@ -11,17 +11,16 @@ Currently supported are:
 * gradle
 
 # Installation
-* if not done already install gdt: see see [gdt](https://github.com/svene/directory_template) )
-* gdt.sh install -github svene dt_java
+* if not done already install gdt: see see [gdt](https://github.com/svene/directory_template)
+* invoke: gdt.sh install -github svene dt_java
 
-# Usage
-# javafx template
+## javafx template
 
-
-* create empty directory and cd into it
-* gdt.sh javafx
+* create an empty directory and cd into it
+* invoke: gdt.sh javafx
 
 Build and run the example as follows (requires an installation of the build tool 'gradle'):
 
-* gradle run
+* invoke: gradle run
 
+(soon gdt templates for the gradle wrapper will be available so that a gradle installation will not be necessary anymore)
