@@ -34,7 +34,7 @@ which should show a nice JavaFX hello world window.
 
 ## Open Dolphin template
 
-Directory Template to start a new [Open Dolphin](https://github.com/canoo/open-dolphin) project
+Directory Template to start a new [Open Dolphin](http://open-dolphin.org/) project.
 
 * create an empty directory and cd into it
 * invoke: gdt.sh opendolphin
@@ -58,5 +58,7 @@ and in a second terminal
 * gradle :client:run
 
 Not that the client and the server communication messages now appear in the client respectively server terminal.
+
+To continue have a look at the Open Dolphin tutorial of [DolphinJumpStart](https://github.com/canoo/DolphinJumpStart)
 
 (soon gdt templates for the gradle wrapper will be available so that a gradle installation will not be necessary anymore)
