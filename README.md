@@ -10,6 +10,7 @@ Currently supported are:
 * javafx
 * opendolphin
 * gradle
+* gradlewrapper15
 
 ## Installation
 * if not done already install gdt: see see [gdt](https://github.com/svene/directory_template)
