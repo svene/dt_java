@@ -1,0 +1,24 @@
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+subprojects {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+
+dependencies {
+    compile project(':combined')
+}
+
+
+mainClassName = '${packagename}.ApplicationStarter'
