@@ -1,6 +1,10 @@
+apply plugin: 'application'
+
 dependencies {
     compile project(':client')
     compile project(':server')
     compile "org.open-dolphin:dolphin-combined:$dolphinVersion"
     testCompile "junit:junit:4.11"
 }
+
+mainClassName = '${packagename}.ApplicationInMemoryStarter'
