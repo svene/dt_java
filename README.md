@@ -8,6 +8,7 @@ Currently supported are:
 * java
 * swing
 * javafx
+* opendolphin
 * gradle
 
 ## Installation
