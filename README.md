@@ -46,7 +46,7 @@ install gradle. Instead you can simply use the wrapper. E.g. instead of
 
 you can invoke
 
-* gradlew build
+* ./gradlew build
 
 ## JavaFX template
 
