@@ -20,6 +20,34 @@ If you already have installed dt_java but want to use a newer version of a templ
 
 * gdt.sh update dt_java
 
+## Gradle Wrapper template
+
+* create an empty directory and cd into it
+* invoke: gdt.sh gradlewrapper15
+
+which will create the following files and directories:
+
+	.
+	├── gradle
+	│   └── wrapper
+	│       ├── gradle-wrapper.jar
+	│       └── gradle-wrapper.properties
+	├── gradlew
+	└── gradlew.bat
+
+On *nix you have to set the executable flag on gradlew like this:
+
+* chmod +x gradlew
+
+Applying this template to a folder which already contains a gradle build file means you do not have to
+install gradle. Instead you can simply use the wrapper. E.g. instead of
+
+* gradle build
+
+you can invoke
+
+* gradlew build
+
 ## JavaFX template
 
 * create an empty directory and cd into it
@@ -30,8 +58,6 @@ Build and run the example as follows (requires an installation of the build tool
 * invoke: gradle run
 
 which should show a nice JavaFX hello world window.
-
-(soon gdt templates for the gradle wrapper will be available so that a gradle installation will not be necessary anymore)
 
 ## Open Dolphin template
 
@@ -62,4 +88,3 @@ Not that the client and the server communication messages now appear in the clie
 
 To continue have a look at the Open Dolphin tutorial of [DolphinJumpStart](https://github.com/canoo/DolphinJumpStart)
 
-(soon gdt templates for the gradle wrapper will be available so that a gradle installation will not be necessary anymore)
