@@ -25,3 +25,5 @@ dependencies {
     compile project(':combined')
 }
 
+task 'runWithGroovy' (dependsOn: ':combined:run') {
+}

@@ -1,3 +1,5 @@
+package ${packagename}
+
 import org.opendolphin.core.client.comm.JavaFXUiThreadHandler
 import org.opendolphin.core.comm.DefaultInMemoryConfig
 import ${packagename}.MainRegistrarAction

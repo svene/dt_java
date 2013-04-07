@@ -8,3 +8,9 @@ dependencies {
 }
 
 mainClassName = '${packagename}.ApplicationInMemoryStarter'
+
+gradle.taskGraph.whenReady { tg ->
+	if (tg.hasTask(':runWithGroovy')) {
+		project.setProperty('mainClassName', '${packagename}.start')
+	}
+}
