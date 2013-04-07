@@ -9,6 +9,8 @@ repositories {
 
 subprojects {
     apply plugin: 'java'
+    apply plugin: 'groovy'
+
     repositories {
         mavenCentral()
         mavenLocal()

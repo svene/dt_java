@@ -4,6 +4,7 @@ dependencies {
     compile project.files("${System.properties['java.home']}/lib/jfxrt.jar")
     compile project(':shared')
     compile "org.open-dolphin:dolphin-client-javafx:$dolphinVersion"
+    compile "org.codehaus.groovyfx:groovyfx:0.2"
     compile "org.open-dolphin:dolphin-client:$dolphinVersion"
 }
 
