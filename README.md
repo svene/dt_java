@@ -77,7 +77,11 @@ which should show a small window with a button on it. If you click it you should
 on the terminal illustrating the commands which are sent from client to server and vice versa.
 
 
-To run it in remove mode invoke:
+To run int in groovy and development mode invoke:
+
+* gradle runWithGroovy
+
+To run it in remote mode invoke:
 
 * gradle jettyRun
 
