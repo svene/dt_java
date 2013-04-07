@@ -3,6 +3,7 @@ def util = new org.svenehrke.directorytemplate.DTUtil()
 config {
 	parameters = [
 		[name: 'packagename', value: 'com.mycompany.mypackage', prompt: 'Packagename'],
+		[name: 'projectName', value: 'OpenDolphinApplication', prompt: 'Projectname'],
 	]
 	transformer = { params ->
 		def result = []

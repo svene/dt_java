@@ -13,6 +13,9 @@ subprojects {
         mavenCentral()
         mavenLocal()
     }
+	dependencies {
+		compile "org.codehaus.groovy:groovy-all:$groovyAllVersion"
+	}
 }
 
 

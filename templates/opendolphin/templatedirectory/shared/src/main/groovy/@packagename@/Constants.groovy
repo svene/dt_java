@@ -1,0 +1,4 @@
+package ${packagename}
+
+class Constants {
+}

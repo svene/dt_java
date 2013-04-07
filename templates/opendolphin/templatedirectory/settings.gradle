@@ -4,4 +4,4 @@ include 'server-app'
 include 'client'
 include 'combined'
 
-rootProject.name = 'Application'
+rootProject.name = '${projectName}'
