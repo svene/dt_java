@@ -10,7 +10,7 @@ Currently supported are:
 * javafx
 * opendolphin
 * gradle
-* gradlewrapper15
+* gradlewrapper
 
 ## Installation
 * if not done already install gdt: see see [gdt](https://github.com/svene/directory_template)
@@ -24,7 +24,7 @@ If you already have installed dt_java but want to use a newer version of a templ
 ## Gradle Wrapper template
 
 * create an empty directory and cd into it
-* invoke: gdt.sh gradlewrapper15
+* invoke: gdt.sh gradlewrapper
 
 which will create the following files and directories:
 
