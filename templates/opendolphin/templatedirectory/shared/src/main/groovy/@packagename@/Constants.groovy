@@ -1,4 +1,0 @@
-package ${packagename}
-
-class Constants {
-}
