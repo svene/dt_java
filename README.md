@@ -1,5 +1,5 @@
 
-#Templates for Directory Structures of JVM based projects
+## Templates for Directory Structures of JVM based projects
 
 This project provides a collection of directory templates to be used by
 gdt (Groovy Directory Template, see [https://github.com/svene/directory_template](https://github.com/svene/directory_template) ).
@@ -8,88 +8,94 @@ Currently supported are:
 * java
 * swing
 * javafx
-* opendolphin
 * gradle
-* gradlewrapper
 
-## Installation
-* if not done already install gdt: see see [gdt](https://github.com/svene/directory_template)
-* invoke: gdt.sh install -github svene dt_java
+### Recent changes
+* 12.8.2013: removed template *gradlewrapper* since gradle 1.7 comes with native support to generate the wrapper: simply call *gradle wrapper*. Note that it is not necessary anymore to have a *wrapper* task in *build.gradle* as it was necessary with earlier versions of gradle.
+* 1.8.2013: moved template *opendolphin* to [https://github.com/canoo/open-dolphin-gdt](https://github.com/canoo/open-dolphin-gdt)
 
-## Update
-If you already have installed dt_java but want to use a newer version of a template update dt_java:
+### Prerequisites
+* You need to have Java 1.7 or at least 1.6. Note that GDT does not work with Java 1.8 yet since groovy's @Grab annotations currently have
+a problem with Java 1.8
 
-* gdt.sh update dt_java
+* You need a groovy installation. I recommend [gvm] (http://gvmtool.net/) to easily install and manage your groovy
+installation.
 
-## Gradle Wrapper template
 
-* create an empty directory and cd into it
-* invoke: gdt.sh gradlewrapper
+### Installation
 
-which will create the following files and directories:
 
-	.
-	├── gradle
-	│   └── wrapper
-	│       ├── gradle-wrapper.jar
-	│       └── gradle-wrapper.properties
-	├── gradlew
-	└── gradlew.bat
+If not done already install gdt:
 
-On *nix you have to set the executable flag on gradlew like this:
+	groovy https://raw.github.com/svene/gdt_bin/master/gdt_setup.groovy
 
-* chmod +x gradlew
+(for details see [gdt](https://github.com/svene/directory_template) )
 
-Applying this template to a folder which already contains a gradle build file means you do not have to
-install gradle. Instead you can simply use the wrapper. E.g. instead of
+Then install *dt_java*:
 
-* gradle build
+	gdt.sh install -github svene dt_java
 
-you can invoke
+### Updating *dt_java*
+If you already have installed *dt_java* but want to use a newer version of a template update *dt_java*:
 
-* ./gradlew build
+	gdt.sh update dt_java
 
-## JavaFX template
+## The Templates
 
-* create an empty directory and cd into it
-* invoke: gdt.sh javafx
+### Java template
+
+Creates a folder with a *src* directory structure for a java project.
+
+Usage:
+
+	mkdir javademo
+	cd javademo
+	gdt.sh java
+
+Most likely you want to use the *gradle* template next to setup a build file for it.
+
+### Gradle template
+
+Creates a *build.gradle* file for your Java project.
+Makes most sense after having applied the *java* template before
+
+Usage:
+
+	mkdir javademo
+	cd javademo
+	gdt.sh gradle
+
+Now you can build and run your project:
+
+	gradle run
+
+### Swing template
+
+Creates a *src* folder with a simple Swing app as a starting point.
+
+Usage:
+
+	mkdir swingdemo
+	cd swingdemo
+	gdt.sh swing
+
+Most likely you want to use the *gradle* template next to setup a build file for it.
+
+### JavaFX template
+
+Creates a *src* folder with a simple JavaFX app as a starting point. Note that this
+templates comes with a *build.gradle* file already included.
+
+Usage:
+
+	mkdir javafxdemo
+	cd javafxdemo
+	gdt.sh javafx
+
 
 Build and run the example as follows (requires an installation of the build tool 'gradle'):
 
-* invoke: gradle run
+	invoke: gradle run
 
 which should show a nice JavaFX hello world window.
-
-## Open Dolphin template
-
-Directory Template to start a new [Open Dolphin](http://open-dolphin.org/) project.
-
-* create an empty directory and cd into it
-* invoke: gdt.sh opendolphin
-
-You can run the application in two modes, the develop/test/debug mode and the remote mode.
-
-To run it in develop mode invoke:
-
-* gradle :combined:run
-
-which should show a small window with a button on it. If you click it you should see some messages
-on the terminal illustrating the commands which are sent from client to server and vice versa.
-
-
-To run int in groovy and development mode invoke:
-
-* gradle runWithGroovy
-
-To run it in remote mode invoke:
-
-* gradle jettyRun
-
-and in a second terminal
-
-* gradle :client:run
-
-Not that the client and the server communication messages now appear in the client respectively server terminal.
-
-To continue have a look at the Open Dolphin tutorial of [DolphinJumpStart](https://github.com/canoo/DolphinJumpStart)
 
