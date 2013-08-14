@@ -99,3 +99,38 @@ Build and run the example as follows (requires an installation of the build tool
 
 which should show a nice JavaFX hello world window.
 
+### Minecraft plugin template
+
+This Creates a *src* folder with a simple minecraft plugin as a starting point. Note that this
+templates comes with a *build.gradle* file already included.
+
+Usage:
+
+	mkdir myminecraftplugin
+	cd myminecraftplugin
+	gdt.sh minecraftplugin
+
+
+Build the plugin as follows (requires an installation of the build tool 'gradle' from www.gradle.org ):
+
+	invoke: gradle build
+
+The jar file of the plugin can be found in build/lib.
+Stop your minecraft server, put it into the *plugins* folder of your minecraft server and restart it.
+
+>This template got inspired by the following posts:
+>
+>* [Introducing Kids to Java Programming Using Minecraft](http://www.dzone.com/links/r/introduce_kids_to_java_programming_using_minecraft.html)
+>
+>and the
+>
+>* [Minecraft Workshop Instructions](http://java4kids.java.net/minecraft-workshop/mar2013/steps.html)
+>
+>
+>	The Minecraft Workshop Instructions explain in detail how to setup a project with a jumpstart minecraft plugin using maven.
+>	This gdt template reuses the described example but employs gradle as build tool. It does not make sense to repeat the instructions
+>	here. So when you have built the plugin's jar file using this template follow the instructions from the Workshop to see how it
+>	can be deployed.
+
+
+
