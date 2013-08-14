@@ -1,0 +1,9 @@
+name: MyPlugin
+main: ${packagename}.MyPlugin
+version: 0.1
+description: My first minecraft plugin
+
+commands:
+   mycommand:
+      description: A Command
+      usage: /<mycommand> 
