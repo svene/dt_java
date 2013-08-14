@@ -6,4 +6,4 @@ description: My first minecraft plugin
 commands:
    mycommand:
       description: A Command
-      usage: /<mycommand> 
+      usage: /<command> 
